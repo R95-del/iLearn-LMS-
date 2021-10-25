@@ -6,6 +6,7 @@ const authroutes = require('./routes/authroutes');
 const coookieParser = require('cookie-parser');
 const {requireauth,checkUser} = require('./middleware/authmiddleware');
 const User = require('./models/User');
+const port = process.env.PORT || 3000;
 
 
 //express app
@@ -17,7 +18,7 @@ app.use(bodyParser.json())
 //database connection
 const dbURI = 'mongodb+srv://Rishi:test123@stigefinal.mij9d.mongodb.net/stige_LMS?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
- .then((result) =>app.listen(3000))
+ .then((result) =>app.listen(`${port}`))
  .catch((err) => console.log(err));
 
 //middleware
