@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: white
+}
+
+.logo{
+    cursor: pointer;
+   
+    
+}
+
+button{
+    margin-top: 15px;
+    padding: 9px 20px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+   
+}
+button:hover{
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+
+.main {
+    transform: translateY(15%);
+    margin: 2%;
+}
+
+.card {
+    width: 27%;
+    display: inline-block;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 5px;
+    margin: 2%;
+}
+
+.image img {
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+
+
+}
+
+.title {
+
+    text-align: center;
+    padding: 10px;
+
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.des {
+    padding: 3px;
+    text-align: center;
+
+    padding-top: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+button {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 136, 169, 1);
+    border: 1px solid rgba(0, 136, 169, 1);
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+.hdds{
+    flex-direction: row;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+button:hover {
+    cursor: pointer;
+}
+
+@media (max-width:640px){
+    .items{
+        flex-basis: 80%;
+        
+    }
+        .main{
+    transform: translateY(15%);
+    margin-left: 20%;
+    
+        }
+       
+        .cta{
+            width: 92%;
+            font-size: 20px;
+            height: 8%;
+        }
+        .card{
+            width:75%;
+        }
+        .card-bt{
+            width: 40%;
+            font-size: 20px;
+            font-weight: 500;
+            height: 20%;
+        }
+        .logo{
+            width: 50%;
+        }
+        li, a{
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            color: white;
+            text-decoration: none;
+        }
+       
+    }
+    

@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+ 
+li, a, button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: white
+}
+
+.logo{
+    cursor: pointer;
+   
+    
+}
+.nav-links{
+    list-style: none;
+
+}
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+
+}
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+    color:black;
+}
+.nav-links li a:hover{
+    color: #0088a9;
+}
+button{
+    margin-top: 15px;
+    padding: 9px 20px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+   
+}
+button:hover{
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+.maindiv{
+    width: 70%;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-45%,-30%);
+    background-image: url('/img/hero2.jpg');
+    background-size: 100% 100%;
+    box-shadow: 1px 2px 10px 5px rgba(0, 136, 169, 0.8);
+    animation: slider 15s infinite linear;
+}
+
+@keyframes slider{
+    0%{
+        background-image: url('/img/hero2.jpg');
+    }
+    40%{
+        background-image: url('/img/hero3.jpg');
+    }
+    80%{
+        background-image: url('/img/hero1.jpeg');
+    }
+}
+
+/*carder*/
+
+.main {
+    transform: translateY(120%);
+    margin: 2%;
+}
+
+.card {
+    width: 27%;
+    display: inline-block;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 5px;
+    margin: 2%;
+}
+
+.image img {
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+
+
+}
+
+.title {
+
+    text-align: center;
+    padding: 10px;
+
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.des {
+    padding: 3px;
+    text-align: center;
+
+    padding-top: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+button {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 136, 169, 1);
+    border: 1px solid rgba(0, 136, 169, 1);
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+/* footer*/
+footer{
+    background: #242524;
+    color: #fff;
+    padding: 60px 0;
+    margin-top: 550px;
+}
+.container{
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+li{
+    font-size: 15px;
+    list-style: none;
+    line-height: 2;
+}
+a{
+    text-decoration: none;
+    color: #ccc;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.items{
+    flex-basis: 20%;
+}
+
+.items .logo{
+    text-transform: capitalize;
+    font-size: 15px;
+    color: #b6b6b6;
+}
+.items p{
+    margin: 1.2em 0;
+}
+.social{
+    display: flex;
+}
+.social a{
+    height: 30px;
+    width: 30px;
+    background: #383535;
+    border-radius: 5px;
+    margin:10px 5px;
+    text-align: center;
+}
+.social a i{
+    font-size: 15px;
+    line-height: 30px;
+}
+.items h3{
+    position: relative;
+    font-size: 20px;
+    margin-bottom: 1rem;
+    color: aliceblue;
+}
+.items h3:hover{
+    color: #0088a9;
+}
+.items ul li a {
+    font-size: 15px;
+}
+.items ul li a:hover{
+    color: #0088a9;
+}
+.items h3::after{
+    content:"";
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background: #fff;
+    bottom: -4px;
+    left: 0;
+}
+hr{
+    opacity: .3;
+}
+footer .end{
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+
+@media (max-width:640px){
+    .items{
+    flex-basis: 80%;
+    margin: auto;
+}
+.maindiv{
+    height: 250px;
+}
+    .main{
+transform: translateY(50%);
+margin-left: 20%;
+
+    }
+    .cta{
+        width: 92%;
+        height: 40%;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .card{
+        width:75%;
+    }
+    .card-btn{
+        width: 40%;
+        height: 20%;
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .logo{
+        width: 50%;
+    }
+    li, a{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        color: white;
+        text-decoration: none;
+    }
+   
+}

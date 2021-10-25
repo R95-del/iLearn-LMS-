@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="/img/logo.jpg" alt="logo" width="200px" height="50px">
+        
+        <a  href="/logout"><button class="cta">Logout</button></a>
+
+
+    </header>
+    <h2 class="hdds">Welcome, <%= user.name %>
+    </h2>
+
+    <main>
+
+        <!--card -->
+
+        <div class="main">
+
+            <!--cards -->
+
+            <div class="card">
+
+                <div class="image">
+                    <img src="/img/card1.jpg">
+                </div>
+                <div class="title">
+                    <h1>
+                        Full-Stack Web Development</h1>
+                </div>
+                <div class="des">
+                    <p></p>
+                    <a href="/dashboard/full-stack">
+                        <button class="card-bt">Read More...</button>
+                    </a>
+                </div>
+            </div>
+            <!--cards -->
+
+
+            <div class="card">
+
+                <div class="image">
+                    <img src="/img/card2.jpg">
+                </div>
+                <div class="title">
+                    <h1>
+                        Data Science</h1>
+                </div>
+                <div class="des">
+                    <p><strong> Upcoming in Next Month</strong></p>
+                    <a href="">
+                        <button class="card-bt">Read More...</button>
+                    </a>
+                </div>
+            </div>
+            <!--cards -->
+
+            <div class="card">
+
+                <div class="image">
+                    <img src="/img/card4.png">
+                </div>
+                <div class="title">
+                    <h1>
+                        Mobile App Development</h1>
+                </div>
+                <div class="des">
+                    <p><strong> Upcoming in Next Month</strong></p>
+                    <a href="">
+                        <button class="card-bt">Read More...</button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+</body>
+
+</html>

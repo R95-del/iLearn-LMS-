@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="/img/logo.jpg" alt="logo" width="200px" height="50px">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="">Contact</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="center">
+        <h1>SignUp</h1>
+        <form action="/signup" method="POST">
+
+            <div class="txt_field">
+                <input type="text" required name="name">
+                <span></span>
+                <label>Name</label>
+            </div>
+            
+            <div class="txt_field">
+                <input type="email" required name="email">
+                <span></span>
+                <label>Email</label>
+                <div class="email_error"></div>
+            </div>
+            <div class="txt_field">
+                <input type="password" required name="password">
+                <span></span>
+                <label>Password</label>
+                <div class="password_error"></div>
+            </div>
+            <div class="pass">Forget Password?</div>
+            <input type="submit" value="login" class="btn">
+            <div class="signup_link">
+               
+            </div>
+        </form>
+    </div>
+    <script>
+        const form= document.querySelector('form');
+        const emailError = document.querySelector('.email_error');
+        const passwordError = document.querySelector('.password_error');
+       
+
+
+        form.addEventListener('submit',async(e) =>{
+            e.preventDefault();
+
+            //reset errors
+            emailError.textContent = '';
+            passwordError.textContent = '';
+            
+
+            //get the values
+            const name = form.name.value;
+            const email = form.email.value;
+            const password = form.password.value;
+         
+           
+            try{
+                const res = await fetch('/signup',{
+                    method:'POST',
+                    body:JSON.stringify({name,email,password}),
+                    headers:{ 'content-Type':'application/json'}
+                });
+                const data = await res.json();
+                console.log(data);
+                if(data.errors){
+                    emailError.textContent = data.errors.email;
+                    passwordError.textContent = data.errors.password;
+                }
+                if(data.user){
+                    location.assign('/dashboard');
+                }
+                
+            }
+            catch(err){
+                console.log(err);
+            }
+            
+        })
+    </script>
+</body>
+</html>
