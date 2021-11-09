@@ -53,7 +53,12 @@ app.get('/dashboard/full-stack/lecture-3',(req,res)=>{
 app.get('/about',(req,res)=>{
     res.render('about');
 })
-
+app.get('/dashboard/datascience/lecture-0',(req,res)=>{
+    res.render('dataScience');
+})
+app.get('/dashboard/Mobile-App-Development/lecture-0',(req,res)=>{
+    res.render('mobileDev');
+})
 
 app.use(authroutes);
 

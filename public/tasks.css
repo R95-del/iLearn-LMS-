@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+.tsk{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 5vmax;
+    margin-top: 3vw;
+    font-weight: bolder;
+    font-size: 41px;
+}
+
+#task{
+    display: flex;
+    flex-direction: row;
+    width: 18vw;
+    height: 6vh;
+    margin-left: 40%;
+    text-align: center;
+}
+
+#Add{
+    margin-top: 3vmax;
+    margin-left: 47%;
+    width: 7vw;
+    height: 4.5vh;
+    color: black;
+    background-color: rgb(132, 186, 248);
+    outline: none;
+    border: rgb(132, 186, 248);
+    border-radius: 5vmax;
+}
+#Add:hover{
+    background-color: rgb(87, 148, 240);
+}
+
+form > p {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30%;
+    margin-top: 2%;
+    font-size: 20px;
+    font-weight: 800;
+}
+button{
+    width: 7vw;
+    height: 4.5vh;
+    color: black;
+    background-color: rgb(132, 186, 248);
+    outline: none;
+    border: rgb(132, 186, 248);
+    border-radius: 5vmax;
+    float: right;
+    margin-right: 5%;
+    margin-top: -2%;
+}
+
+@media (max-width:640px){
+    #task{
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    button{
+        width: 15%;
+
+    }
+
+    form > p {
+        margin-left: 15%;
+        margin-top: 10%;
+    }
+    p {
+        margin-top: 5%;
+    }
+
+    #Add{
+        width: 15%;
+        margin-left: 40%;
+    }
+    .tsk{
+        font-size: 30px;
+        margin-left: 25%;
+    }
+}

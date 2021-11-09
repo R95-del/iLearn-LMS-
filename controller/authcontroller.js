@@ -1,5 +1,6 @@
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
+const Tasks = require('../models/Tasks');
 
 //handle error
 const handleErrors = (err) =>{
@@ -81,5 +82,44 @@ module.exports.logout_get = (req,res) =>{
     res.redirect('/');
 }   
 
+module.exports.task_get = (req,res) =>{
+    var mytask;
+    Tasks.find({},(err,data)=>{
+         if(err){
+            console.log(err);
+        }
+        if(data){
+            mytask = data;
+        }
+         res.render('tasks',{data:mytask});
+    }); 
+   
+}
  
+module.exports.add_task_post = (req,res)=>{
+    const task = req.body.task;
+    Tasks({task: task }).save(function (err,doc) {
+        if(err){
+            console.log(err);
+        }
+        res.redirect('/tasks');
+    });
+}
+
+module.exports.delete_task_post = (req,res)=>{
+    const id = req.body.id;
+
+    Tasks.findOneAndRemove({_id: id},(err,doc)=>{
+        res.redirect('/tasks');
+    });
+}
+
+module.exports.update_task_post = (req,res)=>{
+     const id = req.body.id;
+
+     Tasks.findOneAndUpdate({ _id:id},(err,doc)=>{
+         res.redirect('/tasks');
+
+     })
+}
 

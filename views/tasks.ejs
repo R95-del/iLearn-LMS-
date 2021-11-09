@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="tasks.css">
+</head>
+
+<body>
+    <header>
+        <a  href="/logout"><button class="cta">Logout</button></a>
+    </header>
+    <form method="POST" action='/add'>
+        <h1 class="tsk">Enter A Task</h1>
+        <input type="text" name="task" id='task' placeholder="Enter a task">
+        <input type="submit" value="Add" id='Add'>
+
+        <% for (var Tasks of data ){ %>
+            
+            <form action="/delete" method="POST">
+                <p>
+                    <%= Tasks.task%>
+                </p>
+                <input type="hidden" name='id' value='<%= Tasks._id %>'>
+                <% if(Tasks.status){
+                 
+                }
+                else{ %>
+                    <button type="submit" formaction="/update">Mark Done</button>
+                <% } %>
+                
+                <button type="submit">Delete</button>
+            </form>
+            <% } %>
+    </form>
+</body>
+
+</html>

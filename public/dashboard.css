@@ -131,6 +131,8 @@ button:hover {
         }
         .logo{
             width: 50%;
+            margin-left: -10%;
+            padding-right: 5%;
         }
         li, a{
             font-family: "Montserrat", sans-serif;
